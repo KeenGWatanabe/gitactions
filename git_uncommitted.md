@@ -26,7 +26,13 @@ If you want to keep the changes you've made to `variables.tf`, you can commit th
    git add <resolved-files>
    git commit
    ```
-
+5. **Remote version check (final check):**
+   If no more prompts on your git files e.g. A, U, M, just to be clear, call the url of local git you are working on:
+   ```bash
+   git remote -v
+   origin  https://github.com/keengwatanabe/gitactions.git (fetch)
+   origin  https://github.com/keengwatanabe/gitactions.git (push)
+   ```
 ---
 
 ### **Option 2: Stash Your Changes**

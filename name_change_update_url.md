@@ -5,6 +5,9 @@ To check if your local repository is in sync with the remote repository, especia
 
    ```bash
    git remote -v
+   origin  https://github.com/keengwatanabe/gitactions.git (fetch)
+   origin  https://github.com/keengwatanabe/gitactions.git (push)
+
    ```
 
    This will list all remotes and their URLs. If the URL is outdated, update it:
