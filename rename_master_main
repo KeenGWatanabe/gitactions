@@ -1,0 +1,18 @@
+# Check remote branches
+git fetch origin
+git branch -r
+
+# If origin/main exists
+git checkout -b main origin/main
+
+# If origin/main does not exist
+git checkout -b main
+git push -u origin main
+
+# Delete local master branch (if it exists)
+git branch -d master
+
+# Update local repository
+git fetch origin
+git checkout main
+git pull origin main
