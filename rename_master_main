@@ -41,4 +41,4 @@ git branch -d master
 This will create a new branch called `new-branch`, switch to it, and then delete the `master` branch.
 
 ### Important Note
-Deleting the `master` branch is a significant action, especially if it is the default branch in your repository. Make sure that you really want to delete it and that you have merged any important changes into another branch before doing so.
+Deleting the `master` branch is a significant action, especially if it is the default branch in your repository. Make sure that you really want to delete it and that you `have merged any important changes into another branch before doing so`.
