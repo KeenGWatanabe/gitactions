@@ -1,18 +1,44 @@
-# Check remote branches
-git fetch origin
-git branch -r
+The error message you're seeing indicates that you are trying to delete the `master` branch while it is currently checked out. Git does not allow you to delete the branch that you are currently on.
 
-# If origin/main exists
-git checkout -b main origin/main
+To delete the `master` branch, you need to first switch to a different branch. Here’s how you can do it:
 
-# If origin/main does not exist
-git checkout -b main
-git push -u origin main
+1. **Checkout a different branch**: If you have another branch available, switch to it using the following command:
 
-# Delete local master branch (if it exists)
+   ```bash
+   git checkout <other-branch>
+   ```
+
+   Replace `<other-branch>` with the name of the branch you want to switch to.
+
+2. **Delete the `master` branch**: Once you are on a different branch, you can delete the `master` branch using:
+
+   ```bash
+   git branch -d master
+   ```
+
+   If the branch has unmerged changes and you still want to delete it, you can force delete it with:
+
+   ```bash
+   git branch -D master
+   ```
+
+### Example
+
+Assume you have a branch named `develop`:
+
+```bash
+git checkout develop
 git branch -d master
+```
 
-# Update local repository
-git fetch origin
-git checkout main
-git pull origin main
+If `develop` does not exist and you want to create a new branch to switch to:
+
+```bash
+git checkout -b new-branch
+git branch -d master
+```
+
+This will create a new branch called `new-branch`, switch to it, and then delete the `master` branch.
+
+### Important Note
+Deleting the `master` branch is a significant action, especially if it is the default branch in your repository. Make sure that you really want to delete it and that you have merged any important changes into another branch before doing so.
