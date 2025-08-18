@@ -1,6 +1,6 @@
-# how do i set ruleset in Github settings so that collaborators cannot commit unless repo owner approves it? The steps on Github console. My current setting is Ruleset Name: dev_rules Enforcement sttaus: Active Bypass list: Repository admin Targets: by pattern "main", "dev", "prod" (repo has these branches) Branch rules selected: Restrict deletions, Require pull request before merging- Required approvals: 0, and Block force pushes. But somehow collaborators still manage to push commit changes without pull requests!
+Qn: how do i set ruleset in Github settings so that collaborators cannot commit unless repo owner approves it? The steps on Github console. My current setting is Ruleset Name: dev_rules Enforcement sttaus: Active Bypass list: Repository admin Targets: by pattern "main", "dev", "prod" (repo has these branches) Branch rules selected: Restrict deletions, Require pull request before merging- Required approvals: 0, and Block force pushes. But somehow collaborators still manage to push commit changes without pull requests!
 
-
+# Deepseek
 It looks like your current ruleset is missing a key restriction: **Restrict updates**. This setting ensures that only users with bypass permissions can push directly to the targeted branches, preventing collaborators from committing changes without a pull request.
 
 Here’s how you can update your ruleset in GitHub to enforce this:
