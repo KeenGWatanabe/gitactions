@@ -93,3 +93,31 @@ git clone https://github.com/KeenGWatanabe/RepoName NewRepoName
 - **GitHub Pages** allows you to host a website from a GitHub repository.
 
 If you want to contribute to the original repository, you should **fork** it first, then clone your fork. If you just want to work locally, cloning is sufficient. For hosting a website, use GitHub Pages with a repository named `username.github.io`.
+
+### Gemini
+Pushing changes to a forked repository doesn't directly affect the original "upstream" repository. This is where the **pull request** comes in, giving the original maintainers full control over what changes are integrated.
+
+### The Pull Request Workflow
+
+1.  **Forking and Cloning:** You create a **fork**, which is your own copy of the original repository. You then clone this fork to your local machine. This is your personal workspace, completely separate from the original repo.
+
+2.  **Making and Pushing Changes:** You make your desired code changes within your local repository, commit them, and then `git push` them to **your forked repository**. The changes are only on your fork and your local machine, not the original repo.
+
+3.  **Creating a Pull Request (PR):** This is the critical step. After pushing your changes to your fork, you go to the hosting service (like GitHub or GitLab) and create a **pull request**. This is essentially a formal request to the maintainers of the original repository. You're asking them to "pull" the changes from your forked branch into their main branch. 
+
+---
+
+### How Maintainers Control Changes
+
+The pull request gives the original repository maintainers a centralized system to review and manage incoming changes before they are merged. Here's what they can do:
+
+* **Code Review:** Maintainers can review your code line by line, leave comments, ask questions, and suggest improvements. This ensures all incoming code meets the project's standards and quality.
+* **Automated Checks:** Many projects use **Continuous Integration (CI)** tools that automatically run tests, linting, and other checks on every pull request. The maintainers can require these checks to pass before a merge is even considered, preventing broken code from being introduced.
+* **Discussion and Collaboration:** The pull request serves as a public forum for discussion. Other contributors and community members can weigh in, providing valuable feedback and helping to refine the changes.
+* **Merging, Reverting, or Closing:** Ultimately, the maintainers have the final say. They can choose to:
+    * **Merge** the pull request: They can accept your changes and merge them into the `main` branch.
+    * **Revert** the changes: If a bug is later discovered, they can easily revert the merge.
+    * **Request Changes:** They can ask you to make further edits before they will merge your code.
+    * **Close** the pull request: They can reject the changes completely if they don't align with the project's goals or standards.
+
+This controlled process prevents unauthorized or low-quality changes from ever reaching the main project, ensuring the integrity and stability of the codebase.
