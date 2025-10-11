@@ -1,4 +1,4 @@
-## Replacing `main` with `qrcode`, as main is not updating after pull-request from qrcode -> main
+## Replacing `main` with `qrcode`, as main is not updating after pull-request from qrcode→main
 
 **No, you don't need a pull request** if you use Option 1 with force push. Here's why:
 
