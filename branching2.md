@@ -6,9 +6,9 @@
 
 ### **Option 1 (force push) - NO pull request needed**
 ```bash
-git checkout main
-git reset --hard qrcode
-git push origin main --force
+git checkout main //switch working branch to main
+git reset --hard qrcode // all commits in main replace by those in qrcode
+git push origin main --force //pushes qrcode to main now
 ```
 - This **directly overwrites** remote main with your branch
 - **Bypasses** the need for a pull request
