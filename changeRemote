@@ -25,4 +25,4 @@ After fixing the remote URL, push your code:
 git push -u origin main
 ```
 
-The issue was that when you tried to add the `KeenGWatanabe/html-lifeguard` remote, it failed because `origin` already existed pointing to a different repository (`60936/60936-lifesaving.git`). Your push went to the wrong repository.
+The issue was that when you tried to add the `KeenGWatanabe/html-lifeguard` remote, it failed because `origin` already existed pointing to a different repository (`60936/60936-lifesaving.git`). Your push went to the wrong repository.      
