@@ -1,0 +1,28 @@
+I can see the issue! You're trying to push to `https://github.com/KeenGWatanabe/html-lifeguard.git` but your remote is actually pointing to `https://github.com/60936/60936-lifesaving.git`.
+
+Here's how to fix it:
+
+## Option 1: Update the existing remote URL
+```bash
+git remote set-url origin https://github.com/KeenGWatanabe/html-lifeguard.git
+```
+
+## Option 2: Remove and re-add the remote
+```bash
+git remote remove origin
+git remote add origin https://github.com/KeenGWatanabe/html-lifeguard.git
+```
+
+## Option 3: If you want to push to BOTH remotes
+You can add the new one as an additional remote:
+```bash
+git remote add keen https://github.com/KeenGWatanabe/html-lifeguard.git
+git push -u keen main
+```
+
+After fixing the remote URL, push your code:
+```bash
+git push -u origin main
+```
+
+The issue was that when you tried to add the `KeenGWatanabe/html-lifeguard` remote, it failed because `origin` already existed pointing to a different repository (`60936/60936-lifesaving.git`). Your push went to the wrong repository.
